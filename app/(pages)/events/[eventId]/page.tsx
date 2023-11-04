@@ -1,19 +1,12 @@
-import {Header} from "@/components/header";
 import {Navigator} from "@/components/navigator";
-import {Footer} from "@/components/footer";
 
-export default function Home() {
-  return (
-    <div>
 
-        <Navigator label={"/"}/>
-        <div className={"m-3 p-2 break-words justify-center "}>
-            <div className={"relative "}>
-            <span className="text-3xl font-semibold group">About Computer Society of India
+const Events = () => {
 
-            </span>
+    return (
+        <div>
 
-            </div>
+            <Navigator label={"Events"}/>
             <p className={"p-2 ml-3 text-justify"}>
                 A potential show stopper for the E-Waste Facility Locator project could be:
 
@@ -44,7 +37,6 @@ export default function Home() {
                 By addressing the potential show stopper related to limited or inaccurate facility data, you can maintain the reliability and effectiveness of your E-Waste Facility Locator platform, ensuring it serves its intended purpose effectively.
             </p>
         </div>
-
-    </div>
-  )
+    )
 }
+export  default Events
