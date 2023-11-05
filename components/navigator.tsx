@@ -6,7 +6,7 @@ import {cn} from "@/lib/utils";
 import {MobileToggle} from "@/components/mobile-toggle";
 
 interface NavProps{
-    fixed:boolean
+    fixed:boolean,
 }
 
 export const Navigator = ({fixed}: NavProps) => {
@@ -19,7 +19,7 @@ export const Navigator = ({fixed}: NavProps) => {
 
 
     // Define an array of link labels
-    const links = ['/', 'committee', 'events'];
+    const links = ['home', 'committee', 'events'];
 
     return (
 
@@ -27,10 +27,10 @@ export const Navigator = ({fixed}: NavProps) => {
 
                 <div className={"hidden md:flex justify-around text-white"}>
                     {links.map((link) => (
-                        <Link legacyBehavior key={link} href={`/${link}`}>
+                        <Link legacyBehavior key={link} href={`/${link!=="home" ? link : ""}`}>
                             <a
                                 className={`hover:underline capitalize ${
-                                    activeLink.includes(link) ? 'font-bold' : ''
+                                    activeLink.includes(link) || activeLink==="/"&&link==="home" ? 'font-bold' : ''
                                 }`}
                             >
                                 {link === '/' ? 'Home' : link}
@@ -40,7 +40,7 @@ export const Navigator = ({fixed}: NavProps) => {
                 </div>
             <div className={"md:hidden flex items-center"}>
                 <MobileToggle links={links} activeLink={activeLink}/>
-                <span className={`capitalize font-bold text-white justify-center ml-10`}>{activeLink === '/' ? 'Home' : activeLink}</span>
+                <span className={`capitalize font-bold text-white justify-center`}>{activeLink === '/' ? 'Home' : activeLink}</span>
             </div>
         </div>
 

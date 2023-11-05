@@ -24,7 +24,7 @@ export const MobileToggle = ({links, activeLink}: MobileToggleProps) => {
     return(
         <Sheet open={isSheetOpen} onOpenChange={toggleSheet}>
             <SheetTrigger asChild>
-                <Button variant={"ghost"} size={"icon"} className={"md:hidden"} onClick={toggleSheet}>
+                <Button size={"icon"} className={"md:hidden bg-indigo-950"} onClick={toggleSheet}>
                     <Menu className={"text-white h-6 w-6"}/>
                 </Button>
             </SheetTrigger>
@@ -35,16 +35,17 @@ export const MobileToggle = ({links, activeLink}: MobileToggleProps) => {
                 <div className={"flex flex-col p-2 m-2"}>
                     {links.map((link) => (
                         <div className={"pt-3 pb-3"}>
-                        <Link legacyBehavior key={link} href={`/${link}`}>
-                            <a
-                                className={`hover:underline capitalize ${
-                                    activeLink.includes(link) ? 'font-bold' : ''
-                                }`}
-                                onClick={closeSheet}
-                            >
-                                {link === '/' ? 'Home' : link}
-                            </a>
-                        </Link>
+                            <Link legacyBehavior key={link} href={`/${link!=="home" ? link : ""}`}>
+                                <a
+                                    className={`hover:underline capitalize ${
+                                        activeLink.includes(link) || activeLink==="/"&&link==="home" ? 'font-bold' : ''
+                                    }`}
+                                    onClick={closeSheet}
+
+                                >
+                                    {link === '/' ? 'Home' : link}
+                                </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

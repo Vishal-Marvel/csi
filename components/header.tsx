@@ -31,20 +31,31 @@ export const Header = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    const images = [logo1, logo1, logo1]
 
     return (
         <div>
-            <div ref={headerRef} className={"flex justify-between flex-row p-2 m-1"}>
-                {images.map((image)=>(
+            <div ref={headerRef} className={"flex md:justify-between justify-center flex-row p-2 m-1"}>
                     <Image
-                        className="p-3"
-                        src={image}
+                        className="p-3 hidden md:flex"
+                        src={logo1}
                         alt="CSI Logo"
                         width={100}
                         height={100}
                     />
-                ))}
+                <Image
+                    className="p-3"
+                    src={logo1}
+                    alt="CSI Logo"
+                    width={100}
+                    height={100}
+                />
+                <Image
+                    className="p-3 hidden md:flex"
+                    src={logo1}
+                    alt="CSI Logo"
+                    width={100}
+                    height={100}
+                />
             </div>
             <Navigator fixed={fixed}/>
         </div>
