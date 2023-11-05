@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div>
 
-        <Navigator label={"/"}/>
         <div className={"m-3 p-2 break-words justify-center "}>
             <div className={"relative "}>
             <span className="text-3xl font-semibold group">About Computer Society of India
@@ -14,7 +13,7 @@ export default function Home() {
             </span>
 
             </div>
-            <p className={"p-2 ml-3 text-justify"}>
+            <p className={"p-2 md:ml-3 text-justify"}>
                 A potential show stopper for the E-Waste Facility Locator project could be:
 
                 **Limited or Inaccurate Facility Data**:

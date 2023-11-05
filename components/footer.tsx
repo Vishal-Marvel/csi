@@ -3,12 +3,13 @@ import Link from "next/link";
 
 export const Footer = () => {
     return (
-        <div className={"justify-between pt-2 mt-1 bottom-0"}>
-            <div className={"bg-yellow-50"}>
-                <div className={"bg-indigo-950 p-1 w-screen"}></div>
+        <div className={"justify-between pt-2 mt-1"}>
+            <div className={"bg-indigo-950 p-1 w-full"}></div>
 
-                <div className={"m-2 p-2 ml-4 grid lg:grid-cols-3 md:grid-cols-1 justify-items-center gap-5"}>
-                    <div className={"p-2"}>
+            <div className={"bg-yellow-50 p-2"}>
+
+                <div className={"pb-2 ml-4 grid lg:grid-cols-3 md:grid-cols-1 justify-items-center gap-5"}>
+                    <div className={"pb-2"}>
                         <div className="m-2 relative">
                             <span className="text-2xl text-indigo-850 font-bold group">
                                 CONTACT
@@ -32,25 +33,25 @@ export const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex-col items-center lg:translate-y-5">
+                    <div className={"flex-col items-center xl:translate-y-5"}>
                         <Link href="tel:04422512222">
                             <div className="flex items-center group">
                                 <Phone className="h-5 w-5 m-2 transition-transform group-hover:-translate-y-1.5" />
                                 <span className="block">
-        04422512222
-      </span>
+                                        04422512222
+                                </span>
                             </div>
                         </Link>
                         <Link href="mailto:sairam@sairam.edu.in">
                             <div className="flex items-center group">
                                 <Mail className="h-5 w-5 m-2 transition-transform group-hover:-translate-y-1.5" />
                                 <span className="block">
-        sairam@sairam.edu.in
-      </span>
+                                    sairam@sairam.edu.in
+                                </span>
                             </div>
                         </Link>
                     </div>
-                    <div className={"flex-col mr-3 pr-3 md:mt-10 lg:mt-0"}>
+                    <div className={"flex-col mr-3 pr-3 xl:translate-y-2"}>
                         <Link href="mailto:sairam@sairam.edu.in">
                             <div className="flex items-center group">
                                 <Facebook className="h-5 w-5 m-2 transition-transform group-hover:-translate-y-1.5"/>

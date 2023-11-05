@@ -1,12 +1,20 @@
 import {Navigator} from "@/components/navigator";
 
+interface EventProps {
+    params: {
+        eventId: string;
+    }
+}
 
-const Events = () => {
+const Events = ({
+                    params
+                }: EventProps) => {
 
     return (
         <div>
 
             <Navigator label={"Events"}/>
+            {params.eventId}
             <p className={"p-2 ml-3 text-justify"}>
                 A potential show stopper for the E-Waste Facility Locator project could be:
 
