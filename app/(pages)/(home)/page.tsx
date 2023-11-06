@@ -1,7 +1,3 @@
-import {Header} from "@/components/header";
-import {Navigator} from "@/components/navigator";
-import {Footer} from "@/components/footer";
-
 export default function Home() {
   return (
     <div>
@@ -14,33 +10,46 @@ export default function Home() {
 
             </div>
             <p className={"p-2 md:ml-3 text-justify"}>
-                A potential show stopper for the E-Waste Facility Locator project could be:
+                The seed for the Computer Society of India (CSI) was first sown in the year 1965 with a handful of IT
+                enthusiasts who were a computer user group and felt the need to organize their activities. They also
+                wanted to share their knowledge and exchange ideas on what they felt was a fast emerging sector. Today
+                the CSI takes pride in being the largest and most professionally managed association of and for IT
+                professionals in India. The purposes of the Society are scientific and educational directed towards the
+                advancement of the theory and practice of computer science & IT.
 
-                **Limited or Inaccurate Facility Data**:
+                In a span of less than 4 decades, the organization has grown to an evitable size of 1,00,000 strong
+                members consisting of professionals with varied backgrounds including Software developers, Scientists,
+                Academicians, Project Managers, CIO's, CTO's & IT vendors to just name a few. It has spread its branches
+                all over the country.
 
-                **Description**: The availability and accuracy of data regarding e-waste collection facilities are critical for the platform's functionality. If the database of facilities is incomplete, outdated, or contains inaccurate information, it can severely hinder the user experience and the platform's effectiveness.
+                Currently rooted firmly at about 75 different locations, CSI has plans of opening many more chapters &
+                activity centers in smaller towns and cities of the country.
 
-                **Potential Implications**:
+                <br/>
+            </p>
+            <span className="text-3xl font-semibold group">Computer Society of India (Kancheepuram Chapter)
+            </span>
+            <p className={"p-2 md:ml-3 text-justify"}>
+                The vibrant CSI - Kancheepuram Chapter has been inaugurated by Dr. M. Sundaresan, Regional Vice
+                President, Region 7, Computer Society of India on 18.05. 2018 at SRM Valliammai Engineering College with
+                the presence of more than 90 CSI-Life members from various Industries and Academic Institutions.
 
-                1. **User Frustration**: Users may rely on the platform to find the nearest facility for e-waste disposal but could be directed to non-existent or incorrect locations. This can lead to frustration and distrust in the platform.
+            </p>
+            <span className="text-3xl font-semibold group">Vision :
+            </span>
+            <p className={"p-2 md:ml-3 text-justify"}>
 
-                2. **Environmental Impact**: Inaccurate data can result in users choosing improper disposal methods, leading to environmental harm and negating the project's environmental goals.
+                The primary duty is to improving the quality, level &areas of activities to keep the pace with the
+                changing needs and demands of the future.
+            </p>
+            <span className="text-3xl font-semibold group">Mission :
+            </span>
+            <p className={"p-2 md:ml-3 text-justify"}>
 
-                3. **Loss of Credibility**: An unreliable platform can damage its reputation and deter users from utilizing it in the future.
 
-                **Mitigation Strategies**:
-
-                1. **Data Collection**: Collaborate with relevant government agencies, recycling centers, and environmental organizations to ensure the database of e-waste facilities is comprehensive and up-to-date.
-
-                2. **User Contributions**: Allow users to contribute information about new facilities or report changes to existing ones. Implement a moderation system to verify and update user-contributed data.
-
-                3. **Regular Updates**: Establish a process for regularly updating facility information to reflect changes in operating hours, addresses, accepted items, and contact details.
-
-                4. **Data Verification**: Implement data verification checks to ensure the accuracy of facility details, such as address validation through geocoding services.
-
-                5. **Fallback Mechanism**: In cases where facility data is unavailable or incomplete, provide alternative options, such as directing users to contact local environmental authorities for assistance.
-
-                By addressing the potential show stopper related to limited or inaccurate facility data, you can maintain the reliability and effectiveness of your E-Waste Facility Locator platform, ensuring it serves its intended purpose effectively.
+                To facilitate, research, Knowledge sharing , learning & career enhancement for all categories of IT
+                professional, while simultaneously inspiring & nurturing new entrance into the industry and helping the
+                students to integrate into the IT community.
             </p>
         </div>
 

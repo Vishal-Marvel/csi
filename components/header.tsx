@@ -12,7 +12,7 @@ export const Header = () => {
     const handleScroll = () => {
         const header = headerRef.current as HTMLElement | null;
         if (header) {
-            if (window.scrollY >= header.offsetHeight) {
+            if (window.scrollY >= header.offsetHeight + 20) {
                 // Add a CSS class to apply styles for the fixed navbar
                 setFixed(true)
             } else {
