@@ -1,14 +1,11 @@
 "use client"
 import {Menu} from "lucide-react";
 
-import {
-    Sheet,
-    SheetContent, SheetTitle,
-    SheetTrigger
-} from "@/components/ui/sheet";
+import {Sheet, SheetContent, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {useState} from "react";
+
 interface MobileToggleProps{
     links: string[],
     activeLink: string
@@ -34,19 +31,21 @@ export const MobileToggle = ({links, activeLink}: MobileToggleProps) => {
                 </SheetTitle>
                 <div className={"flex flex-col p-2 m-2"}>
                     {links.map((link) => (
-                        <div className={"pt-3 pb-3"}>
-                            <Link legacyBehavior key={link} href={`/${link!=="home" ? link : ""}`}>
-                                <a
-                                    className={`hover:underline capitalize ${
-                                        activeLink.includes(link) || activeLink==="/"&&link==="home" ? 'font-bold' : ''
-                                    }`}
-                                    onClick={closeSheet}
 
-                                >
-                                    {link === '/' ? 'Home' : link}
-                                </a>
-                            </Link>
-                        </div>
+                        <Link key={link} href={`/${link !== "home" ? link : ""}`} onClick={closeSheet}>
+                            <div className={"pt-3 pb-3"}>
+                                    <span
+                                        className={`hover:underline capitalize ${
+                                            activeLink.includes(link) || activeLink === "/" && link === "home" ? 'font-bold' : ''
+                                        }`}
+
+
+                                    >
+                                        {link === '/' ? 'Home' : link}
+                                    </span>
+                            </div>
+                        </Link>
+
                     ))}
                 </div>
             </SheetContent>

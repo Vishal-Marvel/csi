@@ -3,7 +3,7 @@ import Image, {StaticImageData} from "next/image";
 import Link from "next/link";
 
 interface CommitteeCardProps {
-    member: { name: string, image: StaticImageData, role: string },
+    member: { name: string, image: StaticImageData, role?: string },
     link?: string
 }
 export const CustomCard = ({
@@ -29,13 +29,14 @@ export const CustomCard = ({
                 <Card className="w-[300px]">
                     <CardContent>
                         <div className="flex justify-center">
-                            <Image src={member.image} alt={member.name} className={"object-cover"}/>
+                            <Image src={member.image} alt={member.name} className={"mt-3 rounded-[10px]"} height={200}/>
 
                         </div>
-                        <div className={"flex-col text-center"}>
+                        <div className={"flex-col text-center m-2"}>
                             <span className={"font-bold"}>{member.name}</span>
-                            <br/>
-                            <span>{member.role}</span>
+
+                            {member.role && <> <br/> <span>{member.role}</span></>}
+
                         </div>
                     </CardContent>
                 </Card>
