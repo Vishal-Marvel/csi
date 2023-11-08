@@ -29,7 +29,7 @@ export const CustomCard = ({
                 <Card className="w-[300px]">
                     <CardContent>
                         <div className="flex justify-center">
-                            <Image src={member.image} alt={member.name} className={"mt-3 rounded-[10px]"} height={200}/>
+                            <Image src={member.image} alt={member.name} className={"mt-3 rounded-[8px]"} height={200}/>
 
                         </div>
                         <div className={"flex-col text-center m-2"}>

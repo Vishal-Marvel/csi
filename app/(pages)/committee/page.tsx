@@ -2,7 +2,7 @@ import {CustomCard} from "@/components/customCard";
 import {StaticImageData} from "next/image";
 import amothini from '@/public/amothini.webp'
 import aravintharaj from '@/public/aravintharaj.webp'
-import dineshbabbu from '@/public/dineshbabbu.webp'
+import dineshbabbu from '@/public/babbu.webp'
 import periasamy from '@/public/periasamy.webp'
 import priya from '@/public/priya.webp'
 import varsha from '@/public/varsha.webp'
