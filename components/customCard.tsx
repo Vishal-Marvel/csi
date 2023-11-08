@@ -3,38 +3,40 @@ import Image, {StaticImageData} from "next/image";
 import Link from "next/link";
 
 interface CommitteeCardProps {
-    source: StaticImageData,
-    alter: string,
+    member: { name: string, image: StaticImageData, role: string },
     link?: string
 }
 export const CustomCard = ({
-    source, alter, link
-                              } : CommitteeCardProps) => {
+                               member, link
+                           }: CommitteeCardProps) => {
     return (
         <div className={"m-2 p-2 "}>
 
             {link ? (
                 <Link href={link}>
+                    <Card className="w-[300px]">
+                        <CardContent>
+                            <div className="flex-col justify-center">
+                                <Image src={member.image} alt={member.name} height={300} width={200}/>
+                                <span className={"font-bold"}>{member.name}</span>
+                                <span>{member.role}</span>
+                            </div>
 
-                        <Card className="w-[300px]">
-                            <CardContent>
-                                <div className="flex justify-center">
-                                    <Image src={source} alt={alter} height={300} width={200} />
-                                </div>
-                                <span>Details</span>
-                                <p>Description</p>
-                            </CardContent>
-                        </Card>
-
+                        </CardContent>
+                    </Card>
                 </Link>
             ) : (
                 <Card className="w-[300px]">
                     <CardContent>
                         <div className="flex justify-center">
-                            <Image src={source} alt={alter} height={300} width={200} />
+                            <Image src={member.image} alt={member.name} className={"object-cover"}/>
+
                         </div>
-                        <span>Details</span>
-                        <p>Description</p>
+                        <div className={"flex-col text-center"}>
+                            <span className={"font-bold"}>{member.name}</span>
+                            <br/>
+                            <span>{member.role}</span>
+                        </div>
                     </CardContent>
                 </Card>
             )}

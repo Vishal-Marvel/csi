@@ -1,10 +1,11 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type {Metadata} from 'next'
 import {Open_Sans} from 'next/font/google'
 import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
 import {cn} from "@/lib/utils";
 import React from "react";
+
 const inter = Open_Sans({ subsets: ['latin'] })
 
 
@@ -20,12 +21,15 @@ export default function RootLayout({
   return (
 
   <html lang="en">
-      <body className={cn(inter.className)}>
-      <Header/>
+  <head>
+      <link rel="icon" href="/csilogo.ico" sizes="any"/>
+  </head>
+  <body className={cn(inter.className)}>
+  <Header/>
 
-      {children}
-      <Footer/>
-      </body>
-    </html>
+  {children}
+  <Footer/>
+  </body>
+  </html>
   )
 }

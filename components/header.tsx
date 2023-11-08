@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 
-import logo1 from "@/public/csilogo.jpg"
+import logo1 from "@/public/csilogo.webp"
 import {useEffect, useRef, useState} from "react";
 import {Navigator} from "@/components/navigator";
 
