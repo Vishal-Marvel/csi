@@ -22,7 +22,7 @@ export default function RootLayout({
 
   <html lang="en">
   <head>
-      <link rel="icon" href="/csilogo.webp" sizes="any"/>
+      <link rel="icon" href="/csilogo-kpm.webp" sizes="any"/>
   </head>
   <body className={cn(inter.className)}>
   <Header/>

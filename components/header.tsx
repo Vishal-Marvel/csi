@@ -1,12 +1,15 @@
 "use client"
 import Image from "next/image";
 
-import logo1 from "@/public/csilogo.webp"
+import csiKpmLogo from "@/public/csilogo-kpm.webp"
+import logo from "@/public/csilogo.webp"
+import saiRamLogo from "@/public/sairam-logo.webp"
+import chairman from "@/public/chairman.webp"
 import {useEffect, useRef, useState} from "react";
 import {Navigator} from "@/components/navigator";
 
 export const Header = () => {
-    const [fixed ,setFixed] = useState(false)
+    const [fixed, setFixed] = useState(false)
     const headerRef = useRef(null);
 
     const handleScroll = () => {
@@ -34,30 +37,80 @@ export const Header = () => {
 
     return (
         <div>
-            <div ref={headerRef} className={"flex md:justify-between justify-center flex-row p-2 m-1"}>
-                    <Image
-                        className="p-3 hidden md:flex"
-                        src={logo1}
-                        alt="CSI Logo"
-                        width={100}
-                        height={100}
-                    />
+            <div ref={headerRef} className={"flex justify-between flex-col md:flex-row p-2 m-1"}>
+                {/* CSI Logo (Hidden in Mobile View) */}
                 <Image
-                    className="p-3"
-                    src={logo1}
+                    className="p-3 object-contain md:flex hidden"
+                    src={logo}
                     alt="CSI Logo"
-                    width={100}
-                    height={100}
+                    width={120}
+                    height={10}
                 />
+
+                {/* Div Container (Top in Mobile View) */}
+                <div className={"flex-col order-first md:order-none justify-center text-center"}>
+                    <div className={"flex justify-center"}>
+                        {/* Sai Ram Logo (Centered) */}
+                        <Image
+                            className="p-3 object-contain"
+                            src={saiRamLogo}
+                            alt="Sairam Logo"
+                            width={255}
+                            height={5}
+                        />
+                        <div className={" mt-5 mb-5 pr-0.5 border-amber-950 bg-black"}></div>
+
+                        {/* Chairman Image (Centered) */}
+                        <Image
+                            className="p-3 object-contain"
+                            src={chairman}
+                            alt="Chairman"
+                            width={110}
+                            height={10}
+                        />
+                    </div>
+                    <span className={"font-bold text-indigo-950 text-2xl "}> COMPUTER SOCIETY OF INDIA</span>
+                </div>
+
+                {/* CSI Logo and KPM Logo (Hidden in Desktop View) */}
+                <div className={"flex justify-center md:hidden"}>
+                    {/* CSI Logo (Hidden in Desktop View) */}
+                    <Image
+                        className="p-3 object-contain"
+                        src={logo}
+                        alt="CSI Logo"
+                        width={120}
+                        height={10}
+                    />
+
+                    {/* CSI KPM Logo (Hidden in Desktop View) */}
+                    <Image
+                        className="p-3 object-contain"
+                        src={csiKpmLogo}
+                        alt="CSI KPM Logo"
+                        width={140}
+                        height={10}
+                    />
+                </div>
+
+                {/* CSI KPM Logo (Hidden in Mobile View) */}
                 <Image
-                    className="p-3 hidden md:flex"
-                    src={logo1}
-                    alt="CSI Logo"
-                    width={100}
-                    height={100}
+                    className="p-3 object-contain md:flex hidden"
+                    src={csiKpmLogo}
+                    alt="CSI KPM Logo"
+                    width={140}
+                    height={10}
                 />
             </div>
+
+            {/**
+             * Navigator component that provides navigation links.
+             * @component
+             * @param {boolean} fixed - Determines whether the Navigator should be fixed at the top.
+             */
+            }
             <Navigator fixed={fixed}/>
+
         </div>
 
     )

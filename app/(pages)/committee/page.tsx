@@ -8,6 +8,7 @@ import priya from '@/public/priya.webp'
 import varsha from '@/public/varsha.webp'
 import venkatram from '@/public/venkatram.webp'
 import vishal from '@/public/vishal.webp'
+import saikawshik from '@/public/saikawshik.webp'
 
 
 const Committee = () => {
@@ -19,7 +20,7 @@ const Committee = () => {
         {name: "Mr. Venkat Ram S", image: venkatram, role: "Secretary"},
         {name: "Ms. Varsha S", image: varsha, role: "Vice Secretary"},
         {name: "Mr. Dhinesh Babbu A", image: dineshbabbu, role: "Treasurer"},
-        {name: "Mr. Sai Kaushik", image: periasamy, role: "Vice Treasurer"},
+        {name: "Mr. Sai Kaushik", image: saikawshik, role: "Vice Treasurer"},
         {name: "Mr. Vishal N", image: vishal, role: "Web Master"},
     ]
 
