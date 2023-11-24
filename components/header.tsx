@@ -2,8 +2,8 @@
 import Image from "next/image";
 
 import csiKpmLogo from "@/public/csilogo-kpm.webp"
-import logo from "@/public/csilogo.webp"
 import saiRamLogo from "@/public/sairam-logo.webp"
+import sec from "@/public/SEC.webp"
 import chairman from "@/public/chairman.webp"
 import {useEffect, useRef, useState} from "react";
 import {Navigator} from "@/components/navigator";
@@ -37,11 +37,11 @@ export const Header = () => {
 
     return (
         <div>
-            <div ref={headerRef} className={"flex justify-between flex-col md:flex-row p-2 m-1"}>
+            <div ref={headerRef} className={"flex justify-between align-middle flex-col md:flex-row p-2 m-1"}>
                 {/* CSI Logo (Hidden in Mobile View) */}
                 <Image
                     className="p-3 object-contain md:flex hidden"
-                    src={logo}
+                    src={sec}
                     alt="CSI Logo"
                     width={120}
                     height={10}
@@ -65,7 +65,7 @@ export const Header = () => {
                             className="p-3 object-contain"
                             src={chairman}
                             alt="Chairman"
-                            width={110}
+                            width={90}
                             height={10}
                         />
                     </div>
@@ -77,7 +77,7 @@ export const Header = () => {
                     {/* CSI Logo (Hidden in Desktop View) */}
                     <Image
                         className="p-3 object-contain"
-                        src={logo}
+                        src={sec}
                         alt="CSI Logo"
                         width={120}
                         height={10}

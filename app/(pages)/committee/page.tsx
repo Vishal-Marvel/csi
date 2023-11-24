@@ -12,9 +12,13 @@ import saikawshik from '@/public/saikawshik.webp'
 
 
 const Committee = () => {
-    const committee: { name: string, image: StaticImageData, role: string }[] = [
+    const member: { name: string, image: StaticImageData, role: string } =
+        {name: "Dr. B. Latha", image: periasamy, role: "HOD/CSE"}
+    const staffs: { name: string, image: StaticImageData, role: string }[] = [
         {name: "Dr. J. K. Periasamy", image: periasamy, role: "SBC-CSI & Asso. Prof/CSE"},
         {name: "Dr. B. Priya", image: priya, role: "SBC-CSI & Asso. Prof/CSE"},
+    ]
+    const committee: { name: string, image: StaticImageData, role: string }[] = [
         {name: "Mr. Aravintharaj S", image: aravintharaj, role: "Chairman"},
         {name: "Ms. Amothini A", image: amothini, role: "Vice Chairman"},
         {name: "Mr. Venkat Ram S", image: venkatram, role: "Secretary"},
@@ -26,8 +30,17 @@ const Committee = () => {
 
     return (
         <div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-1 justify-items-center">
+            <div className="flex justify-items-center justify-center">
+                <CustomCard member={member}/>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 m-1 justify-items-center">
+                {staffs.map((member, index) => (
+                    <CustomCard key={index} member={member}/>
+                ))
+                }
+            </div>
+            {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-1 justify-items-center">*/}
+            <div className="flex flex-wrap m-1 justify-items-center justify-center">
                 {committee.map((member, index) => (
                     <CustomCard key={index} member={member}/>
                 ))
