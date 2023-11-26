@@ -7,6 +7,7 @@ import sec from "@/public/SEC.webp"
 import chairman from "@/public/chairman.webp"
 import {useEffect, useRef, useState} from "react";
 import {Navigator} from "@/components/navigator";
+import {FloatNavigator} from "@/components/float-navigator";
 
 export const Header = () => {
     const [fixed, setFixed] = useState(false)
@@ -15,7 +16,7 @@ export const Header = () => {
     const handleScroll = () => {
         const header = headerRef.current as HTMLElement | null;
         if (header) {
-            if (window.scrollY >= header.offsetHeight + 20) {
+            if (window.scrollY >= header.offsetHeight + 10) {
                 // Add a CSS class to apply styles for the fixed navbar
                 setFixed(true)
             } else {
@@ -109,7 +110,8 @@ export const Header = () => {
              * @param {boolean} fixed - Determines whether the Navigator should be fixed at the top.
              */
             }
-            <Navigator fixed={fixed}/>
+            <Navigator/>
+            <FloatNavigator fixed={fixed}/>
 
         </div>
 
