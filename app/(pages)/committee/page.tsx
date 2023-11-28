@@ -9,11 +9,12 @@ import varsha from '@/public/varsha.webp'
 import venkatram from '@/public/venkatram.webp'
 import vishal from '@/public/vishal.webp'
 import saikawshik from '@/public/saikawshik.webp'
+import defaultprofile from '@/public/defaultprofile.webp'
 
 
 const Committee = () => {
     const member: { name: string, image: StaticImageData, role: string } =
-        {name: "Dr. B. Latha", image: periasamy, role: "HOD/CSE"}
+        {name: "Dr. B. Latha", image: defaultprofile, role: "HOD/CSE"}
     const staffs: { name: string, image: StaticImageData, role: string }[] = [
         {name: "Dr. J. K. Periasamy", image: periasamy, role: "SBC-CSI & Asso. Prof/CSE"},
         {name: "Dr. B. Priya", image: priya, role: "SBC-CSI & Asso. Prof/CSE"},
